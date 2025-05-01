@@ -1,0 +1,8 @@
+<h1>Welcome, {{ account.user.username }}</h1>
+<p>Balance: ${{ account.balance }}</p>
+<h2>Recent Transactions</h2>
+<ul>
+    {% for transaction in transactions %}
+    <li>${{ transaction.amount }} on {{ transaction.timestamp }}</li>
+    {% endfor %}
+</ul>
